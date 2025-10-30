@@ -1,1 +1,324 @@
-# chosunsukal
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>조선수칼 | 수제비 · 칼국수 — 대전 둔산</title>
+  <meta name="description" content="대전 둔산 수제 수제비·칼국수 전문점 ‘조선수칼’. 숯불불고기와 함께 즐기는 한 그릇." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%23e11d48'/%3E%3Cpath d='M16 28h32a10 10 0 01-20 6 10 10 0 01-12-6z' fill='white'/%3E%3Cpath d='M22 20c0-6 20-6 20 0' stroke='white' stroke-width='3' fill='none' stroke-linecap='round'/%3E%3C/svg%3E" />
+  <style>
+    :root{--bg:#ffffff;--card:#ffffff;--muted:#6b7280;--fg:#0f172a;--accent:#e11d48;--accent-2:#f59e0b;--ok:#16a34a;--line:#e5e7eb}
+    *{box-sizing:border-box}
+    html,body{margin:0}
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Pretendard,Apple SD Gothic Neo,Noto Sans KR,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--fg);line-height:1.65}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    .container{width:min(1100px,92vw);margin:0 auto}
+    header{position:sticky;top:0;background:rgba(255,255,255,.85);backdrop-filter:saturate(160%) blur(10px);border-bottom:1px solid var(--line);z-index:20}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.2px}
+    .brand .logo{width:36px;height:36px}
+    .brand small{display:block;font-weight:600;color:var(--muted)}
+    .nav .actions{display:flex;gap:10px}
+    .btn{padding:10px 14px;border:1px solid var(--line);border-radius:12px;background:#fff}
+    .btn.primary{background:linear-gradient(180deg,#f43f5e,#e11d48);border:none;color:#fff}
+    .hero .container{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center;padding:56px 0 20px}
+    @media(max-width:900px){.hero .container{grid-template-columns:1fr;padding:36px 0 8px}}
+    h1{font-size:clamp(28px,5vw,48px);line-height:1.15;margin:0 0 10px;font-weight:900}
+    .sub{color:var(--muted);margin-bottom:18px}
+    .badge{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--line);padding:8px 12px;border-radius:999px;margin-bottom:14px}
+    .badge .dot{width:8px;height:8px;border-radius:50%;background:var(--ok);box-shadow:0 0 0 4px rgba(22,163,74,.15)}
+    .tagline{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0}
+    .tag{padding:6px 10px;border-radius:999px;border:1px solid var(--line);background:#fff;color:var(--fg);font-size:14px}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px}
+    .grid{display:grid;gap:16px}
+    .grid.cols-3{grid-template-columns:repeat(3,1fr)}
+    @media(max-width:900px){.grid.cols-3{grid-template-columns:1fr 1fr}}
+    @media(max-width:620px){.grid.cols-3{grid-template-columns:1fr}}
+    section{padding:32px 0}
+    h2{font-size:22px;margin:0 0 14px}
+    .menu-item{display:flex;justify-content:space-between;gap:12px;padding:12px 14px;border-radius:12px;background:#fff;border:1px solid var(--line)}
+    .menu-item .name{font-weight:800}
+    .menu-item .desc{color:var(--muted);font-size:14px}
+    .menu-item .price{font-weight:900;white-space:nowrap}
+    .gallery{display:grid;grid-template-columns:2fr 1fr;gap:16px}
+    .gallery .tall{grid-row:span 2}
+    @media(max-width:900px){.gallery{grid-template-columns:1fr}}
+    .svg-card{aspect-ratio:4/3;background:#fff;border-radius:18px;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+    .cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+    .hours{display:grid;grid-template-columns:1fr auto;gap:8px;color:#374151}
+    footer{padding:28px 0 60px;color:#6b7280;border-top:1px solid var(--line)}
+    .map-box{border:1px dashed var(--line);border-radius:14px;height:320px;display:flex;align-items:center;justify-content:center;background:repeating-linear-gradient(45deg,#fafafa 0 10px,#fff 10px 20px)}
+    .ribbon{position:absolute;top:-8px;right:-8px;background:linear-gradient(180deg,#f59e0b,#e11d48);padding:8px 14px;color:#fff;border-radius:12px;transform:rotate(8deg);font-weight:800;box-shadow:0 8px 30px rgba(0,0,0,.2)}
+    .pill{display:inline-flex;gap:8px;align-items:center;padding:10px 12px;border-radius:999px;background:#fff;border:1px solid var(--line)}
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <svg class="logo" viewBox="0 0 64 64" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="g" x1="0" x2="0" y1="0" y2="1">
+              <stop stop-color="#f43f5e"/>
+              <stop offset="1" stop-color="#e11d48"/>
+            </linearGradient>
+          </defs>
+          <circle cx="32" cy="32" r="30" fill="url(#g)" />
+          <path d="M16 28h32a10 10 0 01-20 6 10 10 0 01-12-6z" fill="#fff"/>
+          <path d="M22 20c0-6 20-6 20 0" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round"/>
+        </svg>
+        <div>
+          <div style="font-size:18px">조선수칼</div>
+          <small>밀고뜯고 수제비 칼국수</small>
+        </div>
+      </div>
+      <div class="actions">
+        <a class="btn" href="#menu">메뉴</a>
+        <a class="btn" href="#visit">오시는 길</a>
+        <a class="btn primary" href="tel:010-1234-5678" aria-label="전화걸기">전화 주문</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container">
+        <div>
+          <div class="badge"><span class="dot"></span> 오늘도 갓 뽑은 면, 매일 끓인 육수</div>
+          <h1>담백하고 깊은 국물,
+            <br/>쫄깃한 면의 정석 — <span style="color:var(--accent)">조선수칼</span></h1>
+          
+          <div class="tagline">
+            <span class="tag">직접 반죽·숙성</span>
+            <span class="tag">멸치+사골 블렌딩 육수</span>
+            <span class="tag">저염 레시피</span>
+            <span class="tag">포장/배달 가능</span>
+          </div>
+          <div class="cta">
+            <a class="btn primary" href="#menu">대표 메뉴 보기</a>
+            <a class="btn" href="#hours">영업시간</a>
+          </div>
+        </div>
+        <!-- Hero illustration (on white) -->
+        <div class="card" style="position:relative">
+          <span class="ribbon">OPEN 준비중</span>
+          <div class="svg-card" aria-hidden="true">
+            <svg viewBox="0 0 600 450" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="수제비·칼국수 일러스트">
+              <defs>
+                <linearGradient id="bgG" x1="0" x2="1">
+                  <stop stop-color="#f59e0b"/>
+                  <stop offset="1" stop-color="#e11d48"/>
+                </linearGradient>
+              </defs>
+              <g transform="translate(0,10)">
+                <ellipse cx="300" cy="360" rx="220" ry="30" fill="#e5e7eb"/>
+                <g>
+                  <path d="M120 240c0 60 80 110 180 110s180-50 180-110H120z" fill="#ffffff" stroke="#e5e7eb"/>
+                  <path d="M120 240h360" stroke="#e5e7eb"/>
+                  <path d="M180 180c40-50 80 40 120-10 40-50 80 40 120-10" stroke="url(#bgG)" stroke-width="10" fill="none" stroke-linecap="round"/>
+                  <path d="M170 200c50-40 90 50 130 0 40-50 80 30 130-20" stroke="#111827" stroke-width="8" fill="none" stroke-linecap="round" stroke-opacity=".8"/>
+                  <circle cx="280" cy="230" r="12" fill="#22c55e"/>
+                  <circle cx="330" cy="220" r="10" fill="#ef4444"/>
+                  <circle cx="350" cy="250" r="8" fill="#fde047"/>
+                  <circle cx="250" cy="250" r="9" fill="#22c55e"/>
+                </g>
+              </g>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Signature points -->
+    <section>
+      <div class="container grid cols-3">
+        <div class="card">
+          <h2>매일 만드는 반죽</h2>
+          <p>매일 새벽 반죽·숙성으로 쫄깃한 식감을 살렸습니다. 수제비 반죽도 주문 직후 떼어 넣어 더욱 부드럽습니다.</p>
+        </div>
+        <div class="card">
+          <h2>담백한 블렌딩 육수</h2>
+          <p>멸치·다시마의 시원함과 사골의 깊이를 조화시킨 저염 레시피. 마지막 한 숟갈까지 깔끔합니다.</p>
+        </div>
+        <div class="card">
+          <h2>제철 재료</h2>
+          <p>지역 농산물과 제철 해산물로 정직하게. 좋은 재료는 맛으로 증명합니다.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Menu -->
+    <section id="menu">
+      <div class="container">
+        <h2>대표 메뉴</h2>
+        <div class="grid cols-3">
+          <div class="menu-item">
+            <div>
+              <div class="name">조선 칼국수</div>
+              <div class="desc">시그니처 저염 육수 + 직접 뽑은 면</div>
+            </div>
+            <div class="price">₩8,500</div>
+          </div>
+          <div class="menu-item">
+            <div>
+              <div class="name">손수 수제비</div>
+              <div class="desc">주문 즉시 떼어 넣는 쫀득한 수제비</div>
+            </div>
+            <div class="price">₩9,000</div>
+          </div>
+          <div class="menu-item">
+            <div>
+              <div class="name">매콤 바지락 칼국수</div>
+              <div class="desc">시원한 바지락 + 칼칼한 매운맛</div>
+            </div>
+            <div class="price">₩9,500</div>
+          </div>
+          <div class="menu-item">
+            <div>
+              <div class="name">들깨 수제비</div>
+              <div class="desc">고소함 가득, 포만감 챙겨요</div>
+            </div>
+            <div class="price">₩10,000</div>
+          </div>
+          <div class="menu-item">
+            <div>
+              <div class="name">얼큰 해물 칼국수</div>
+              <div class="desc">해물 듬뿍 얼큰 국물</div>
+            </div>
+            <div class="price">₩10,500</div>
+          </div>
+          <div class="menu-item">
+            <div>
+              <div class="name">왕만두 (4P)</div>
+              <div class="desc">당일 빚은 속 가득 왕만두</div>
+            </div>
+            <div class="price">₩6,000</div>
+          </div>
+          <div class="menu-item" style="grid-column:1/-1">
+            <div>
+              <div class="name">숯불불고기 (사이드)</div>
+              <div class="desc">향긋한 숯향으로 곁들여 먹는 추천 메뉴</div>
+            </div>
+            <div class="price">₩8,000</div>
+          </div>
+        </div>
+        <div class="pill" style="margin-top:12px">
+          <span class="sr-only">안내<\/span> * 포장\/배달 가능 · 단체 예약 문의 환영
+        <\/div>
+      </div>
+    </section>
+
+    <!-- Gallery (inline SVG images) -->
+    <section>
+      <div class="container">
+        <h2>사진 미리보기</h2>
+        <div class="gallery">
+          <div class="svg-card tall">
+            <svg viewBox="0 0 600 800" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="김가루 고명 칼국수 그릇">
+              <rect width="600" height="800" fill="#ffffff"/>
+              <g transform="translate(0,40)">
+                <ellipse cx="300" cy="650" rx="220" ry="30" fill="#e5e7eb"/>
+                <g>
+                  <ellipse cx="300" cy="520" rx="200" ry="26" fill="#f3f4f6"/>
+                  <ellipse cx="300" cy="520" rx="190" ry="20" fill="#11182710"/>
+                  <circle cx="300" cy="420" r="160" fill="#ffffff" stroke="#e5e7eb" />
+                  <path d="M160 420c0 30 140 30 140 0s140-30 140 0" fill="#fde68a" fill-opacity=".9"/>
+                  <path d="M210 350c40 40 80 0 120 40 40 40 80 0 120 40" stroke="#f59e0b" stroke-width="10" fill="none" stroke-linecap="round"/>
+                  <circle cx="280" cy="410" r="10" fill="#22c55e"/>
+                  <circle cx="350" cy="430" r="8" fill="#ef4444"/>
+                  <circle cx="330" cy="400" r="8" fill="#22c55e"/>
+                </g>
+              </g>
+            </svg>
+          </div>
+          <div class="svg-card">
+            <svg viewBox="0 0 600 450" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="손수 수제비 반죽">
+              <rect width="600" height="450" fill="#ffffff"/>
+              <g transform="translate(0,10)">
+                <ellipse cx="300" cy="380" rx="210" ry="24" fill="#e5e7eb"/>
+                <rect x="140" y="170" width="320" height="140" rx="18" fill="#f9fafb" stroke="#e5e7eb"/>
+                <path d="M160 190c40 60 80 0 120 40s80 0 120 40" stroke="#e11d48" stroke-width="8" fill="none" stroke-linecap="round"/>
+                <circle cx="360" cy="230" r="20" fill="#d1d5db"/>
+                <circle cx="240" cy="260" r="18" fill="#e5e7eb"/>
+              </g>
+            </svg>
+          </div>
+          <div class="svg-card">
+            <svg viewBox="0 0 600 450" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="오픈 준비 인테리어">
+              <rect width="600" height="450" fill="#ffffff"/>
+              <g>
+                <rect x="60" y="70" width="480" height="300" rx="16" fill="#f9fafb" stroke="#e5e7eb"/>
+                <rect x="90" y="100" width="420" height="60" rx="12" fill="#e11d48" opacity=".9"/>
+                <rect x="90" y="180" width="200" height="160" rx="12" fill="#f3f4f6"/>
+                <rect x="310" y="180" width="200" height="160" rx="12" fill="#f3f4f6"/>
+              </g>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hours & Info -->
+    <section id="hours">
+      <div class="container grid cols-3">
+        <div class="card">
+          <h2>영업시간</h2>
+          <div class="hours">
+            <div>월–금</div><div>11:00 – 21:00</div>
+            <div>토·일</div><div>11:00 – 20:00</div>
+            <div>브레이크</div><div>15:00 – 17:00</div>
+            <div>라스트오더</div><div>영업 종료 30분 전</div>
+          </div>
+        </div>
+        <div class="card">
+          <h2>문의/예약</h2>
+          <p>전화 <a href="tel:010-1234-5678" class="tag">010-1234-5678</a><br/>단체 예약/대관 문의 환영</p>
+          <p class="pill">포장 · 배달 가능 (요청 시 반숙란/김가루 추가)</p>
+        </div>
+        <div class="card" id="visit">
+          <h2>오시는 길 (대전 둔산)</h2>
+          <p>대전 서구 둔산동 000-00 1F — 주차 가능</p>
+          <!-- 외부 네트워크 요청이 발생하지 않도록 지도 iframe 제거 → 정적 미니맵(SVG) 사용 -->
+          <div class="map-box" aria-label="정적 지도">
+            <div style="text-align:center">
+              <div style="font-weight:800; margin-bottom:6px">지도 미리보기</div>
+              <div style="color:#6b7280; font-size:14px">외부 네트워크 접근 없이 표시됩니다.</div>
+              <div class="cta" style="justify-content:center; margin-top:10px">
+                <a class="btn" href="#" onclick="alert('정확한 주소가 확정되면 지도 링크를 연결해 드립니다.'); return false;">지도 앱 열기</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Notice -->
+    <section>
+      <div class="container">
+        <div class="card">
+          <h2>오픈 소식</h2>
+          <p>11월 중 시범 운영 후 정식 오픈 예정입니다. 인스타그램 @chosunsukal 팔로우하고 소식을 받아보세요!</p>
+          <div class="cta">
+            <a class="btn" href="#">Instagram</a>
+            <a class="btn" href="#">Naver Place</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container" style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap">
+      <div>© <span id="year"></span> 조선수칼 — 수제비·칼국수</div>
+      <div style="color:#6b7280">운영사: (주)코에이블 · 사업자등록/알레르기 유발 식재료 고지 가능</div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
